@@ -16,31 +16,46 @@ const THEME_INIT_SCRIPT = `(function(){try{var stored=window.localStorage.getIte
 export const Route = createRootRouteWithContext<MyRouterContext>()({
 	head: () => ({
 		meta: [
+			{ charSet: "utf-8" },
+			{ name: "viewport", content: "width=device-width, initial-scale=1" },
+			{ title: "RentMyNavbar — Monetize your free tool" }, // Good title
 			{
-				charSet: "utf-8",
+				name: "description",
+				content:
+					"A marketplace for premium navbar ads on indie sites & open-source tools.",
+			},
+
+			// Open Graph tags
+			{
+				property: "og:title",
+				content: "RentMyNavbar — Monetize your free tool without selling out",
 			},
 			{
-				name: "viewport",
-				content: "width=device-width, initial-scale=1",
-			},
-			{
-				title: "TanStack Start Starter",
-			},
-			{ name: "twitter:card", content: "summary_large_image" },
-			{ name: "twitter:image:type", content: "image/png" },
-			{ name: "twitter:image:width", content: "1200" },
-			{ name: "twitter:image:height", content: "630" },
-			{
-				name: "twitter:image",
-				content: "https://rentmynavbar.vercel.app/image.png",
+				property: "og:description",
+				content:
+					"Clean ~20px header ads for open-source & indie sites. Real builder audience.",
 			},
 			{
 				property: "og:image",
-				content: "https://rentmynavbar.vercel.app/image.png",
+				content: "https://rentmynavbar.vercel.app/og-image.png",
+			}, // ← Absolute URL, important!
+			{ property: "og:url", content: "https://rentmynavbar.vercel.app/" },
+			{ property: "og:type", content: "website" },
+
+			// Twitter / X specific (helps a lot)
+			{ name: "twitter:card", content: "summary_large_image" },
+			{
+				name: "twitter:title",
+				content: "RentMyNavbar — Monetize your free tool",
 			},
-			{ property: "og:image:width", content: "1200" },
-			{ property: "og:image:height", content: "630" },
-			{ property: "og:image:type", content: "image/png" },
+			{
+				name: "twitter:description",
+				content: "Premium navbar ads for indie tools.",
+			},
+			{
+				name: "twitter:image",
+				content: "https://rentmynavbar.vercel.app/og-image.png",
+			},
 		],
 		links: [
 			{
