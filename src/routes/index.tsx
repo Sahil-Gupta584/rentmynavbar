@@ -1,14 +1,23 @@
 import { createFileRoute } from '@tanstack/react-router'
+import LandingNavbar from '#/components/landing/LandingNavbar'
+import Hero from '#/components/landing/Hero'
+import Ticker from '#/components/landing/Ticker'
+import HowItWorks from '#/components/landing/HowItWorks'
+import LandingFooter from '#/components/landing/LandingFooter'
 
-export const Route = createFileRoute('/')({ component: Home })
+export const Route = createFileRoute('/')({
+  component: LandingPage,
+})
 
-function Home() {
+function LandingPage() {
   return (
-    <div className="p-8">
-      <h1 className="text-4xl font-bold">Welcome to TanStack Start</h1>
-      <p className="mt-4 text-lg">
-        Edit <code>src/routes/index.tsx</code> to get started.
-      </p>
+    <div className="landing-page" style={{ background: 'var(--cream)', minHeight: '100vh' }}>
+      <LandingNavbar />
+      <Hero />
+      <Ticker />
+      <HowItWorks />
+      <LandingFooter />
     </div>
   )
 }
+
