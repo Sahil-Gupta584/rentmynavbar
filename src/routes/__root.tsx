@@ -76,6 +76,12 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 			<head>
 				<script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
 				<HeadContent />
+				<script
+  defer
+  data-website-id="69f5e38c000c07517603"
+  data-domain="rentmynavbar.vercel.app"
+  src="https://www.insightly.live/script.js">
+  </script>
 			</head>
 			<body className="font-sans antialiased wrap-anywhere selection:bg-[rgba(79,184,178,0.24)]">
 				{children}
